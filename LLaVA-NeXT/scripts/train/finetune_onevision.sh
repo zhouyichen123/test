@@ -39,7 +39,7 @@ ACCELERATE_CPU_AFFINITY=1 torchrun llava/train/train_mem.py \
     --deepspeed scripts/zero3.json \
     --model_name_or_path ${CKPT_PATH} \
     --version ${PROMPT_VERSION} \
-    --data_path "/root/autodl-tmp/MLLM/LLaVA/playground/data/img_diff copy.json" \
+    --data_path "/root/autodl-tmp/MLLM/LLaVA-NeXT/playground/filtered_new_edit_data/img_diff_object_replacement.json" \
     --image_folder "/root/autodl-tmp/dataset/Img-Diff/object_replacement/filtered_new_edit_data" \
     --pretrain_mm_mlp_adapter="/root/autodl-tmp/model/MLLM/llava-v1.5-7b/mm_projector.bin" \
     --mm_tunable_parts="mm_vision_tower,mm_mlp_adapter,mm_language_model" \
@@ -81,6 +81,7 @@ ACCELERATE_CPU_AFFINITY=1 torchrun llava/train/train_mem.py \
 
 
 
+    # --data_path "/root/autodl-tmp/MLLM/LLaVA/playground/data/img_diff copy.json" \
     # --data_path ./onevision_data.yaml \
     # --image_folder ./onevision_data/images \
     # --video_folder ./onevision_data/videos \
